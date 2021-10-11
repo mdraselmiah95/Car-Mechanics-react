@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Service.css";
 const Service = ({ service }) => {
   //   console.log(props);
   const { name, price, description, img } = service;
