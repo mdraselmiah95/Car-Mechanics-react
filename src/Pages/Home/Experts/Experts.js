@@ -30,7 +30,7 @@ const experts = [
 
 const Experts = () => {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <h2 className="text-primary">This is Experts</h2>
       <div className="row">
         {experts.map((expert) => (
