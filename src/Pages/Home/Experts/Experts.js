@@ -33,8 +33,8 @@ const Experts = () => {
     <div className="container">
       <h2 className="text-primary">This is Experts</h2>
       <div className="row">
-        {experts.map((expect) => (
-          <Expert key={expect.name} expect={expect} />
+        {experts.map((expert) => (
+          <Expert key={expert.name} expert={expert} />
         ))}
       </div>
     </div>
