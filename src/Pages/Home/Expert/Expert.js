@@ -1,9 +1,10 @@
 import React from "react";
 
-const Expert = () => {
+const Expert = ({ expert }) => {
+  const { name, img, expertize } = expert;
   return (
     <div>
-      <h2>This is Expert</h2>
+      <img src={img} alt="" />
     </div>
   );
 };
