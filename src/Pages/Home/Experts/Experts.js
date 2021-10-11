@@ -29,8 +29,8 @@ const experts = [
 
 const Experts = () => {
   return (
-    <div>
-      <h2>This is Experts</h2>
+    <div className="container">
+      <h2 className="text-primary">This is Experts</h2>
     </div>
   );
 };
