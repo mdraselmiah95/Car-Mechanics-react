@@ -1,4 +1,9 @@
 import React from "react";
+import mechanic1 from "../../../images/mechanic/mechanic-1.jpg";
+import mechanic2 from "../../../images/mechanic/mechanic-2.jpg";
+import mechanic3 from "../../../images/mechanic/mechanic-3.jpg";
+import mechanic4 from "../../../images/mechanic/mechanic-4.jpg";
+
 const experts = [
   {
     img: mechanic1,
