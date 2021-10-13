@@ -28,7 +28,9 @@ const Header = () => {
               Experts
             </Nav.Link>
             {user.email ? (
-              <Button variant="light">Logout</Button>
+              <Button variant="light" className="me-2">
+                Logout
+              </Button>
             ) : (
               <Nav.Link as={Link} to="/login">
                 Login
