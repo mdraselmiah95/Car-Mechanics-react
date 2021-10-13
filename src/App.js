@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Booking from "./Pages/Booking/Booking/Booking";
 import Home from "./Pages/Home/Home/Home";
