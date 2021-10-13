@@ -8,7 +8,7 @@ const NotFound = () => {
       <h2 className="text-danger fw-bold">Page not found</h2>
       <img src={notfound} alt="notfound" className="img-fluid" /> <br />
       <Link to="/home">
-        <button className="btn btn-outline-primary">Go Back</button>
+        <button className="btn btn-outline-primary px-3 my-4">Go Back</button>
       </Link>
     </div>
   );
