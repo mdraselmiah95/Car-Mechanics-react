@@ -28,7 +28,7 @@ const Header = () => {
               Experts
             </Nav.Link>
             {user.email ? (
-              <Button variant="light" className="me-2">
+              <Button variant="light" className="me-2" onClick={logOut}>
                 Logout
               </Button>
             ) : (
