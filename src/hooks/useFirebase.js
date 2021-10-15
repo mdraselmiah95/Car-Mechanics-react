@@ -33,6 +33,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setUser(result.user);
       })
       .catch((err) => {
         const errorMessage = err.message;
