@@ -4,7 +4,7 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
-  signOut
+  signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Login/Firebase/firebase.init";
@@ -29,14 +29,15 @@ const useFirebase = () => {
 
   const signInUsingFacebook = () => {
     const facebookProvider = new FacebookAuthProvider();
-    signInWithPopup(auth, facebookProvider).then((result) => {
-      const user = result.user;
-      console.log(user)
-      setUser(result.user);
-    })
-      .catch(error){
-     const errorMessage = error.message;
-    }
+    signInWithPopup(auth, facebookProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((err) => {
+        const errorMessage = err.message;
+        console.log(errorMessage);
+      });
   };
 
   const logOut = () => {
@@ -68,5 +69,4 @@ const useFirebase = () => {
     signInUsingFacebook,
   };
 };
-// signInUsingFacebook;
 export default useFirebase;
