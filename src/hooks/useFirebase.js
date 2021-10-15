@@ -1,9 +1,10 @@
 import {
+  FacebookAuthProvider,
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
-  signOut,
+  signOut
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Login/Firebase/firebase.init";
@@ -15,6 +16,7 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
   const auth = getAuth();
 
+  //google sign in
   const signInUsingGoogle = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
@@ -23,6 +25,18 @@ const useFirebase = () => {
         setUser(result.user);
       })
       .finally(() => setIsLoading(false));
+  };
+
+  const signInUsingFacebook = () => {
+    const facebookProvider = new FacebookAuthProvider();
+    signInWithPopup(auth, facebookProvider).then((result) => {
+      const user = result.user;
+      console.log(user)
+      setUser(result.user);
+    })
+      .catch(error){
+     const errorMessage = error.message;
+    }
   };
 
   const logOut = () => {
@@ -51,7 +65,8 @@ const useFirebase = () => {
     signInUsingGoogle,
     logOut,
     isLoading,
+    signInUsingFacebook,
   };
 };
-
+// signInUsingFacebook;
 export default useFirebase;
