@@ -1,3 +1,4 @@
+import "animate.css/animate.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
