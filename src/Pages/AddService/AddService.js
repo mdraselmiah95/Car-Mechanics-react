@@ -5,7 +5,7 @@ const AddService = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <div>
+    <div className="add-service">
       <h2>Please Add a Service</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
