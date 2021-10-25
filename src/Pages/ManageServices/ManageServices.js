@@ -16,7 +16,6 @@ const ManageServices = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.deletedCount) {
           alert("Deleted");
           const remaining = services.filter((service) => service._id !== id);
