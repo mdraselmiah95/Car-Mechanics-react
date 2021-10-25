@@ -8,6 +8,18 @@ const ManageServices = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
+
+  const handleDelete = (id) => {
+    const url = `http://localhost:5000/services/${id}`;
+    fetch(url, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
+
   return (
     <div>
       <h2 className="text-info fw-bolder">
@@ -17,7 +29,12 @@ const ManageServices = () => {
         <div key={service._id} className="border m-3 p-2 rounded">
           <div className="container">
             <h4>{service.name}</h4>
-            <button className="btn btn-outline-danger">DELETE</button>
+            <button
+              onClick={() => handleDelete(service._id)}
+              className="btn btn-outline-danger"
+            >
+              DELETE
+            </button>
           </div>
         </div>
       ))}
